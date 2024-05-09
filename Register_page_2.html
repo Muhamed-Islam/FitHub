@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <style>
+            
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            *:focus{
+                outline: none;
+            }
+            body{
+                position: relative;
+                width: 100%;
+                min-height: 100vh;
+                height: auto;
+                display: flex;
+                justify-content: baseline;
+                align-items: center;
+                
+                background: url('loginn.jpg');
+                background-size:cover ;
+                background-position:center ;
+                font-family: 'roboto', sans-serif;
+
+            }
+            .form{
+                width: 400px;
+                height: auto;
+                color: #fff;
+                font-family: 'roboto', sans-serif;
+            }
+            .heading{
+                    opacity: 0;
+                    text-transform: capitalize;
+                    text-align: center;
+                    font-size: 80px;
+                    font-weight: 300;
+                    margin-bottom: 50px;
+            }
+            input,.sub{
+                opacity: 0;
+                width: 80%;
+                height: 35px;
+                display: block;
+                margin: 20px auto;
+                border-radius: 5px;
+                background: rgba(255, 255, 255, 0.3);
+                border: none;
+                color:#fff ;
+                padding: 15px;
+                transition: 0.5s;
+                text-transform: capitalize;
+            }
+            .sub:hover{
+                background:orange;
+                color: black;
+            }
+            .sub{
+                opacity: 0;
+                width: auto;
+                padding: 0 20px;
+                cursor: pointer;
+                margin: 50PX auto;
+            }
+            input::placeholder{
+                color: #fff;
+            }
+            input:focus::placeholder{
+                transition: 0.5s;
+                color: black;
+            }
+            
+            h3{
+                opacity: 0;
+                width: 80%;
+                height: 35px;
+                margin: 20px auto;
+                display: block;
+                
+             
+
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const form = [...document.querySelector('.form').children];
+                form.forEach((item, i) => {
+                    setTimeout(() => {
+                        item.style.opacity = 1;
+                    }, i * 70);
+                });
+            });
+           
+            
+            function checkk(){ //check password
+                var weightt = document.getElementById('ww');
+                var heightt = document.getElementById('hh');
+                var datee = document.getElementById('mm');
+
+
+                
+                  
+                  if(weightt.value == ""){
+                    alert("You did not enter a the Weight \n" +
+		             "Please enter one now");
+                     weightt.focus();
+                     return false;
+                 }
+                 else if (heightt.value ==""){
+                    alert ("You did not enter a the  height \n" +
+		             "Please enter one now");
+                     heightt.focus();
+		             return false;
+
+                 }
+                 else if(datee.value == ""){
+                    alert("You did not enter a the date \n" +
+		             "Please enter one now");
+                     datee.focus();
+                     return false;
+                 }
+                 
+
+                else{
+                    return true;
+                }
+                
+            }
+            function topage2(){
+                if(checkk()){
+                    window.location.href = 'logIn.html';
+                }
+            }
+        </script>
+        
+    </head>
+    <body>
+        <form action="">
+            <div class="form">
+             <h1 class="heading"><span style="color: orange;">R</span>egister</h1>        
+             <h3>weight</h3>   
+             <input type="number" placeholder=" weight" autocomplete="off" class="weight" id="ww">
+             <h3>height</h3>
+             <input type="number" placeholder=" height" autocomplete="off" class="height" id="hh" >
+             <h3>Birth Date</h3>
+             <input type="date" placeholder="birth_Date" autocomplete="off" class="birth_Date" id="mm" >
+             <button type="button" class="sub" onclick="topage2()">Continue</button>  
+            </div>
+         </form>
+        
+
+    </body>
+</html>
