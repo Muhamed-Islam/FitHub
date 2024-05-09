@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <style>
+            
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            *:focus{
+                outline: none;
+            }
+            
+            body{
+                position: relative;
+                width: 100%;
+                min-height: 100vh;
+                height: auto;
+                display: flex;
+                justify-content: baseline;
+                align-items: center;
+                
+                background: url('loginn.jpg');
+                background-size:cover ;
+                background-position:center ;
+                font-family: 'roboto', sans-serif;
+
+            }
+            .form{
+                /*margin: 100;*/
+                
+                width: 400px;
+                height: auto;
+                color: #fff;
+                font-family: 'roboto', sans-serif;
+            }
+            .heading{
+                   
+                   text-transform: capitalize;
+                    text-align: center;
+                    font-size: 80px;
+                    font-weight: 300;
+                    margin-bottom: 50px;
+            }
+            input,.sub{
+                
+                width: 80%;
+                height: 35px;
+                display: block;
+                margin: 20px auto;
+                border-radius: 5px;
+                background: rgba(255, 255, 255, 0.3);
+                border: none;
+                color:#fff ;
+                padding: 15px;
+                transition: 0.5s;
+                text-transform: capitalize;
+            }
+            .sub:hover{
+                background:orange;
+                color: black;
+            }
+            .sub{
+               
+                width: auto;
+                padding: 0 20px;
+                cursor: pointer;
+                margin: 50PX auto;
+            }
+            input::placeholder{
+                color: #fff;
+            }
+            input:focus::placeholder{
+                transition: 0.5s;
+                color: black;
+            }
+            .link{
+                
+                text-align: center;
+                text-transform: capitalize;
+                color: white;
+                display: block;
+                margin: 30px auto;
+            }
+            .link:hover{
+                transition: 0.5s;
+                color: orange   ;
+
+            }
+            
+
+        </style>
+       
+        
+
+    </head>
+    <body>
+        <div class="form">
+            <h1 class="heading" style="color: azure;">log<span style="color: orange;">in</span></h1>
+            <input type="email" placeholder="email" autocomplete="off" class="email" required>
+            <input type="password" placeholder="password" autocomplete="off" class="password" required>
+            <button class="sub">submit</button>
+            <a href="Register_page_1.html" class="link">Don't have an account? Register One</a>
+            
+        </div>
+    </body>
+</html>
