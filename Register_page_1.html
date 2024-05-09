@@ -93,9 +93,68 @@
                 });
             });
         
-           
-            
-            
+            function checkPass(){ //check password
+                var password = document.getElementById('pass');
+                var confirm_password = document.getElementById('confirm_Pass');
+                var first_Name = document.getElementById('fname');
+                var last_Name  = document.getElementById("lname");
+                var email = document.getElementById('em');
+
+
+                
+                  if (first_Name.value ==""){
+                    alert ("You did not enter a the First name \n" +
+		             "Please enter one now");
+                     first_Name.focus();
+		             return false;
+
+                 }
+                 else if(last_Name.value == ""){
+                    alert("You did not enter a the Last name \n" +
+		             "Please enter one now");
+                     last_Name.focus();
+                     return false;
+                 }
+                 else if(email.value == ""){
+                    alert("You did not enter a the email \n" +
+		             "Please enter one now");
+                     email.focus();
+                     return false;
+                 }
+                 else if (password.value == "") {
+		            alert ("You did not enter a password \n" +
+		             "Please enter one now");
+                     password.focus();
+		             return false;
+                 }
+
+                if(confirm_password.value == password.value){
+                    return true;
+                }
+
+                else{
+                    alert("password doesn't match");
+                    password.focus();
+                    password.select();
+                    return false;
+                }
+                
+            }
+            function topage2(){
+                if(checkPass()){
+                    window.location.href = 'Register_page_2.html';
+                }
+            }
+            function validateEmail(){
+                var email_Field = document.getElementById('em');
+                if(!email_Field.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+                    alert("Enter correct email");
+                    email_Field.select();
+                    email_Field.focus();
+
+
+                }
+            }   
         </script>
 
     </head>
@@ -114,6 +173,8 @@
                 <input type="password" placeholder="password" autocomplete="off" id = "pass" class="password" required>
                 <h3> confirm password</h3>
                 <input type="password" placeholder=" confirm password" autocomplete="off" id = "confirm_Pass" class="confirm_Password" required>
+                <h3>Phone Number</h3>
+                <input type="text" placeholder=" phone number" autocomplete="off" id = "phon" class="Phone_Number" required>
                 <button type="button" class="sub" onclick="topage2()">Continue</button>       
             </div>
          </form>
