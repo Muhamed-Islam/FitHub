@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>Register Page</title>
+        <script>
+            
+        </script>
+        <style>
+            
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            *:focus{
+                outline: none;
+            }
+            body{
+                position: relative;
+                width: 100%;
+                min-height: 100vh;
+                height: auto;
+                display: flex;
+                justify-content: baseline;
+                align-items: center;
+                background: url('loginn.jpg');
+                background-size:cover ;
+                background-position:center ;
+                font-family: 'roboto', sans-serif;
+
+            }
+            .form{
+                width: 400px;
+                height: auto;
+                color: #fff;
+                font-family: 'roboto', sans-serif;
+            }
+            .heading{
+                   text-transform: capitalize;
+                    text-align: center;
+                    font-size: 80px;
+                    font-weight: 300;
+                    margin-bottom: 50px;
+            }
+            input,.sub{
+                opacity: 0;
+                width: 80%;
+                height: 35px;
+                display: block;
+                margin: 20px ;
+                border-radius: 5px;
+                background: rgba(255, 255, 255, 0.3);
+                border: none;
+                color:#fff ;
+                padding: 15px;
+                transition: 0.5s;
+                text-transform: capitalize;
+            }
+            .sub:hover{
+                background:orange;
+                color: black;
+            }
+            .sub{
+                opacity: 0;
+                width: auto;
+                padding: 0 20px;
+                cursor: pointer;
+                margin: 50PX auto;
+            }
+            input::placeholder{
+                color: #fff;
+            }
+            input:focus::placeholder{
+                transition: 0.5s;
+                color: black;
+            }
+
+            h3{
+                opacity: 0;
+                width: 80%;
+                height: 20px;
+                margin: 20px auto;
+                display: block;
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() { //Animation for login page
+                
+                const form = [...document.querySelector('.form').children];
+                form.forEach((item, i) => {
+                    setTimeout(() => {
+                        item.style.opacity = 1; 
+                    }, i * 70);
+                });
+            });
+        
+           
+            
+            
+        </script>
+
+    </head>
+    
+    <body>
+        <form action="">
+            <div class="form">
+                <h1 class="heading"><span style="color: orange;">R</span>egister</h1>
+                <h3>First Name</h3>   
+                <input type="text" placeholder="First Name" autocomplete="off" class="First_Name" id="fname" required >
+                <h3>Last Name</h3>
+                <input type="text" placeholder="Last Name" autocomplete="off" class="Last_Name" id="lname"  required>
+                <h3>Email</h3>
+                <input type="email" placeholder="email" autocomplete="off" class="email" id="em" onchange="validateEmail()" required>
+                <h3> password</h3>
+                <input type="password" placeholder="password" autocomplete="off" id = "pass" class="password" required>
+                <h3> confirm password</h3>
+                <input type="password" placeholder=" confirm password" autocomplete="off" id = "confirm_Pass" class="confirm_Password" required>
+                <button type="button" class="sub" onclick="topage2()">Continue</button>       
+            </div>
+         </form>
+
+    </body>
+</html>
