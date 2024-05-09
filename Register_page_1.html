@@ -99,6 +99,7 @@
                 var first_Name = document.getElementById('fname');
                 var last_Name  = document.getElementById("lname");
                 var email = document.getElementById('em');
+                var phonn = document.getElementById('phone');
 
 
                 
@@ -127,6 +128,13 @@
                      password.focus();
 		             return false;
                  }
+                 else if (phonn.value == "") {
+		            alert ("You did not enter a phone \n" +
+		             "Please enter one now");
+                     phonn.focus();
+		             return false;
+                 }
+
 
                 if(confirm_password.value == password.value){
                     return true;
@@ -174,7 +182,7 @@
                 <h3> confirm password</h3>
                 <input type="password" placeholder=" confirm password" autocomplete="off" id = "confirm_Pass" class="confirm_Password" required>
                 <h3>Phone Number</h3>
-                <input type="text" placeholder=" phone number" autocomplete="off" id = "phon" class="Phone_Number" required>
+                <input type="text" placeholder=" phone number" autocomplete="off" id = "phone" class="Phone_Number" required>
                 <button type="button" class="sub" onclick="topage2()">Continue</button>       
             </div>
          </form>
