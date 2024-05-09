@@ -36,7 +36,7 @@
                 font-family: 'roboto', sans-serif;
             }
             .heading{
-                   
+                   opacity: 0;
                    text-transform: capitalize;
                     text-align: center;
                     font-size: 80px;
@@ -44,7 +44,7 @@
                     margin-bottom: 50px;
             }
             input,.sub{
-                
+                opacity: 0;
                 width: 80%;
                 height: 35px;
                 display: block;
@@ -62,7 +62,7 @@
                 color: black;
             }
             .sub{
-               
+                opacity: 0;
                 width: auto;
                 padding: 0 20px;
                 cursor: pointer;
@@ -76,7 +76,7 @@
                 color: black;
             }
             .link{
-                
+                opacity: 0;
                 text-align: center;
                 text-transform: capitalize;
                 color: white;
@@ -91,7 +91,16 @@
             
 
         </style>
-       
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const form = [...document.querySelector('.form').children];
+                form.forEach((item, i) => {
+                    setTimeout(() => {
+                        item.style.opacity = 1;
+                    }, i * 70);
+                });
+            });
+        </script>
         
 
     </head>
@@ -102,7 +111,6 @@
             <input type="password" placeholder="password" autocomplete="off" class="password" required>
             <button class="sub">submit</button>
             <a href="Register_page_1.html" class="link">Don't have an account? Register One</a>
-            
         </div>
     </body>
 </html>
