@@ -36,8 +36,8 @@
                 font-family: 'roboto', sans-serif;
             }
             .heading{
-                   opacity: 0;
-                   text-transform: capitalize;
+                opacity: 0;
+                text-transform: capitalize;
                     text-align: center;
                     font-size: 80px;
                     font-weight: 300;
@@ -100,17 +100,46 @@
                     }, i * 70);
                 });
             });
+            function checkk(){ //check password
+                var Emmm = document.getElementById('mm');
+                var pp = document.getElementById('pp');
+                
+
+
+                
+                
+                if(Emmm.value == ""){
+                    alert("You did not enter a the Email \n" +
+                    "Please enter one now");
+                    Emmm.focus();
+                    return false;
+                }
+                else if (pp.value ==""){
+                    alert ("You did not enter a the  Password  \n" +
+                    "Please enter one now");
+                    pp.focus();
+                    return false;
+
+                }
+                else{
+                    return true;
+                }
+                
+            }
+            
         </script>
         
 
     </head>
     <body>
-        <div class="form">
+        <form action="signin.php" method="POST">
+        <div class="form" >
             <h1 class="heading" style="color: azure;">log<span style="color: orange;">in</span></h1>
-            <input type="email" placeholder="email" autocomplete="off" class="email" required>
-            <input type="password" placeholder="password" autocomplete="off" class="password" required>
-            <button class="sub">submit</button>
+            <input type="email" placeholder="email" class="email" id="mm"  name="email" required>
+            <input type="password" placeholder="password" autocomplete="off" class="password" id="pp" name="password" required>
+            <button type="submit" class="sub">Log in</button>
             <a href="Register_page_1.html" class="link">Don't have an account? Register One</a>
         </div>
+      </form>
     </body>
 </html>
