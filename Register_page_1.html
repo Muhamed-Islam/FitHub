@@ -24,6 +24,7 @@
                 align-items: center;
                 background: url('loginn.jpg');
                 background-size:cover ;
+                background-attachment: fixed;
                 background-position:center ;
                 font-family: 'roboto', sans-serif;
 
@@ -81,6 +82,19 @@
                 margin: 20px auto;
                 display: block;
             }
+            .link{
+                    opacity: 0;
+                    text-align: center;
+                    text-transform: capitalize;
+                    color: white;
+                    display: block;
+                    margin: 30px auto;
+                }
+                .link:hover{
+                    transition: 0.5s;
+                    color: orange   ;
+
+                }
         </style>
         <script>
             document.addEventListener("DOMContentLoaded", function() { //Animation for login page
@@ -93,66 +107,108 @@
                 });
             });
         
-            function checkPass(){ //check password
-                var password = document.getElementById('pass');
-                var confirm_password = document.getElementById('confirm_Pass');
-                var first_Name = document.getElementById('fname');
-                var last_Name  = document.getElementById("lname");
-                var email = document.getElementById('em');
-                var phonn = document.getElementById('phone');
+            // function checkPass(){ //check password
+            //     var password = document.getElementById('pass');
+            //     var confirm_password = document.getElementById('confirm_Pass');
+            //     var first_Name = document.getElementById('fname');
+            //     var last_Name  = document.getElementById("lname");
+            //     var email = document.getElementById('em');
+            //     var phonn = document.getElementById('phone');
+            //     var weightt = document.getElementById('ww');
+            //     var heightt = document.getElementById('hh');
+            //     var datee = document.getElementById('mm');
+
+                
 
 
                 
-                  if (first_Name.value ==""){
-                    alert ("You did not enter a the First name \n" +
-		             "Please enter one now");
-                     first_Name.focus();
-		             return false;
+            //       if (first_Name.value ==""){
+            //         alert ("You did not enter a the First name \n" +
+		    //          "Please enter one now");
+            //          first_Name.focus();
+		    //          return false;
 
-                 }
-                 else if(last_Name.value == ""){
-                    alert("You did not enter a the Last name \n" +
-		             "Please enter one now");
-                     last_Name.focus();
-                     return false;
-                 }
-                 else if(email.value == ""){
-                    alert("You did not enter a the email \n" +
-		             "Please enter one now");
-                     email.focus();
-                     return false;
-                 }
-                 else if (password.value == "") {
-		            alert ("You did not enter a password \n" +
-		             "Please enter one now");
-                     password.focus();
-		             return false;
-                 }
-                 else if (phonn.value == "") {
-		            alert ("You did not enter a phone \n" +
-		             "Please enter one now");
-                     phonn.focus();
-		             return false;
-                 }
+            //      }
+            //      else if(last_Name.value == ""){
+            //         alert("You did not enter a the Last name \n" +
+		    //          "Please enter one now");
+            //          last_Name.focus();
+            //          return false;
+            //      }
+            //      else if(email.value == ""){
+            //         alert("You did not enter a the email \n" +
+		    //          "Please enter one now");
+            //          email.focus();
+            //          return false;
+            //      }
+            //      else if (password.value == "") {
+		    //         alert ("You did not enter a password \n" +
+		    //          "Please enter one now");
+            //          password.focus();
+		    //          return false;
+            //      }
+            //      else if (confirm_password.value == "") {
+		    //         alert ("You did not Confirm the password \n" +
+		    //          "Please enter one now");
+            //          confirm_password.focus();
+		    //          return false;
+            //      }
+            //      else if (phonn.value == "") {
+		    //         alert ("You did not enter a phone \n" +
+		    //          "Please enter one now");
+            //          phonn.focus();
+		    //          return false;
+            //      }
+            //      else if(weightt.value == ""){
+            //         alert("You did not enter a the Weight \n" +
+		    //          "Please enter one now");
+            //          weightt.focus();
+            //          return false;
+            //      }
+            //      else if (heightt.value ==""){
+            //         alert ("You did not enter a the  height \n" +
+		    //          "Please enter one now");
+            //          heightt.focus();
+		    //          return false;
+
+            //      }
+            //      else if(datee.value == ""){
+            //         alert("You did not enter a the date \n" +
+		    //          "Please enter one now");
+            //          datee.focus();
+            //          return false;
+            //      }
 
 
-                if(confirm_password.value == password.value){
+            //     if(confirm_password.value == password.value){
+            //         return true;
+            //     }
+
+            //     else{
+            //         alert("password doesn't match");
+            //         password.focus();
+            //         password.select();
+            //         return false;
+            //     }
+                
+            // }
+                function check_Conf_Pass() {
+                    var password = document.getElementById('pass');
+                    var confirm_password = document.getElementById('confirm_Pass');
+
+                    if (password.value !== confirm_password.value) {
+                        alert("Passwords do not match. Please enter the same password in both fields.");
+                        document.getElementById('confirm_Pass');
+                        password.focus();
+                        password.select();
+                        return false;
+                    }
+                    else{
                     return true;
+                    }
                 }
 
-                else{
-                    alert("password doesn't match");
-                    password.focus();
-                    password.select();
-                    return false;
-                }
-                
-            }
-            function topage2(){
-                if(checkPass()){
-                    window.location.href = 'Register_page_2.html';
-                }
-            }
+            
             function validateEmail(){
                 var email_Field = document.getElementById('em');
                 if(!email_Field.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
@@ -162,28 +218,53 @@
 
 
                 }
-            }   
+            }
+            function check_Height_weight(){
+                var weightt = document.getElementById('ww');
+                var height = document.getElementById('hh');
+                if (weightt.value<=0){
+                    alert("Please enter real weight");
+                    weightt.focus();
+                    weightt.select();
+                    return false;
+                }
+                else if (height.value<=0){
+                    alert("Please enter real height");
+                    height.focus();
+                    height.select();
+                    return false;
+                }
+                return true;
+            }
+
         </script>
 
     </head>
     
     <body>
-        <form action="">
+        <form action="reg.php" method="POST">
             <div class="form">
                 <h1 class="heading"><span style="color: orange;">R</span>egister</h1>
                 <h3>First Name</h3>   
-                <input type="text" placeholder="First Name" autocomplete="off" class="First_Name" id="fname" required >
+                <input type="text" placeholder="First Name" autocomplete="off" class="First_Name" id="fname" required name="f_name" >
                 <h3>Last Name</h3>
-                <input type="text" placeholder="Last Name" autocomplete="off" class="Last_Name" id="lname"  required>
+                <input type="text" placeholder="Last Name" autocomplete="off" class="Last_Name" id="lname"  required name="l_name">
                 <h3>Email</h3>
-                <input type="email" placeholder="email" autocomplete="off" class="email" id="em" onchange="validateEmail()" required>
+                <input type="email" placeholder="email" autocomplete="off" class="email" id="em" onchange="validateEmail()" required name="email">
                 <h3> password</h3>
-                <input type="password" placeholder="password" autocomplete="off" id = "pass" class="password" required>
+                <input type="password" placeholder="password" autocomplete="off" id = "pass" class="password" required name="password">
                 <h3> confirm password</h3>
-                <input type="password" placeholder=" confirm password" autocomplete="off" id = "confirm_Pass" class="confirm_Password" required>
+                <input type="password" placeholder=" confirm password" autocomplete="off" id = "confirm_Pass" onchange="check_Conf_Pass()" class="confirm_Password"  name="confirm_password" required>
                 <h3>Phone Number</h3>
-                <input type="text" placeholder=" phone number" autocomplete="off" id = "phone" class="Phone_Number" required>
-                <button type="button" class="sub" onclick="topage2()">Continue</button>       
+                <input type="text" placeholder=" phone number" autocomplete="off" id = "phone" class="Phone_Number" required name="pnum">      
+                <h3>weight</h3>   
+                <input type="number" placeholder=" weight" autocomplete="off" class="weight" id="ww" onchange="check_Height_weight()" name="weight" required>
+                <h3>height</h3>
+                <input type="number" placeholder=" height" autocomplete="off" class="height" id="hh" onchange="check_Height_weight()" name="height" required>
+                <h3>Birth Date</h3>
+                <input type="date" placeholder="birth_Date" autocomplete="off" class="birth_Date" id="mm" required>
+                <a href="logIn.html" class="link">already Have an account</a>
+                <button type="submit" class="sub" >signup</button>       
             </div>
          </form>
 
