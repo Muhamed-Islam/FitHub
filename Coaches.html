@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+   <style>
+ 
+    body {
+    
+        height: 100vh;
+                background-color: black;
+                background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("About_pic.jpg") ;
+                background-size: cover;
+                background-position: center;
+                
+                
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:stretch;
+    
+}
+
+.coach-card {
+    position: relative;
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.coach-card:hover {
+    transform: translateY(-10px);
+}
+
+.coach-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.coach-card:hover .coach-image img {
+    transform: scale(1.1);
+}
+
+.coach-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.coach-card:hover .coach-details {
+    opacity: 1;
+}
+
+.coach-details h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.coach-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.coach-details ul li {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+button {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff7f00;
+}
+
+.x{
+                list-style: none;
+
+            }
+            a{
+                text-decoration: none;
+                color: white;
+            }
+            li a:hover{
+                color: orange;
+            }
+            header{
+                position: relative;
+                padding: 0 2rem;
+            }
+            .navigationbar{
+                width: 100%;
+                height: 60px;
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                
+            }
+            .navigationbar .logo {
+                font-size: 1.75rem;
+                font-weight: bold;
+                padding-top: 30px;
+                
+            }
+            
+            .navigationbar .links{
+                display: flex;
+                font-size: 1.2rem;
+                gap: 2rem;
+                padding-top: 30px;
+                
+               
+            }
+            .navigationbar ul li{
+                position: relative;
+            }
+            .action_btn {
+                background-color: orange;
+                color: white;
+                padding: 0.5rem 1rem;
+                border: none;
+                outline: none;
+                border-radius: 20px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                cursor: pointer;
+                
+                
+                
+
+            }
+            .action_btn:hover{
+                color: white;
+            }
+            .navigationbar ul li::after{
+                content: '';
+                height: 3px;
+                width: 0;
+                background: white;
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                transition:width 0.5s;
+            }
+            .navigationbar ul li:hover:after{
+                width: 100%;
+            }
+            .p{
+                color: orange;
+
+            }
+            .content{
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                text-align: center;
+                color: white;
+            }
+            .content h1{
+                font-size: 60px;
+                margin-top: 40px;
+            }
+            .content button{
+                appearance: none;
+                background-color: transparent;
+                border: 2px solid white;
+                border-radius: 20px;
+                box-sizing: border-box;
+                color: orange;
+                cursor: pointer;
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: normal;
+                outline: none;
+                padding: 0.5rem 1rem;
+                text-align: center;
+                text-decoration: none;
+                transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                will-change: transform;
+            }
+            .content button:disabled{
+                pointer-events: none;
+
+            }
+            .content button:hover{
+                color: #fff;
+                border: 2px solid orange;
+                background-color: orange;
+                box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+                transform: translateY(-2px);
+
+            }
+           
+
+
+content button:active{
+                box-shadow: none;
+                transform: translateY(0);
+            }
+            
+            .paragraph_header{
+              margin-bottom: 500px;
+              
+            }
+            
+            .paragraph_text{
+              color:white;
+              font-weight: bold;
+              word-spacing: 2px;
+              font-size: 14px;
+            }
+            .div_paragraph{
+              margin-top: 140px;
+              text-align: center;
+            }
+          
+            .course_header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+            margin-top: 80px;
+            }
+       
+            h4{
+                margin: 0;
+            }
+            .coach_image{
+                border-radius: 40px;
+            }
+            .header_coach{
+                color: orange;
+            }
+
+            .content_course li{
+                
+                font-size: 15px;
+                font-family: Courier;
+                font-weight: bold;
+
+            }
+            .join_button{
+                background-color: orange;
+                            color: white;
+                            padding: 0.5rem 1rem;
+                            border: none;
+                            outline: none;
+                            border-radius: 20px;
+                            font-size: 1.2rem;
+                            font-weight: bold;
+                            cursor: pointer;
+            }
+            .coach_headtexts{
+            
+            font-family: sans-serif; 
+            font-weight: bold ;
+            margin-top: 5px;
+                
+                font-size: 20px; 
+                text-align: center;
+            }
+            .coach-card{
+                box-shadow:15px 15px 15px 15px rgba(0,0,0,1) ;
+            }
+            .imagestyling{
+                box-shadow:2px 1px 8px 2px;
+            }
+
+   </style>
+</head>
+<body>
+    <div class="navigationbar">
+        <div class="logo">
+            <a style="font-family: sans-serif;" href="#"><span class="p">P</span>rime <span class="p">P</span>ump</a>
+        </div>
+        <ul style="font-family:sans-serif;" class="links">
+            <li><a href="home_Page.html">Home</a></li>
+                            <li><a href="Exercis.html">Exercise</a></li>
+                            <li><a href="Coaches.html">Coaches</a></li>
+                            <li><a href="Deit_Page.html">Diets</a></li>
+                            <li><a href="About.html">About</a></li>
+                            <a href="Profile.html"><i class="fa-regular fa-user" style="color: #fff;"></i></a>
+        </ul>
+       
+
+        </div>
+    
+            </header>
+            <div class="content" style="margin-top: 50px;">
+            <h1 class="paragraph_header" style="color: orange; font-weight: bold; font-family: Arial;"> Our Mission</h1>
+
+            </div>
+            <div class="div_paragraph">
+            <p class="paragraph_text" style="font-size: 16px; font-weight: bold ; font-family: sans-serif;">  At our gym, we are more than just a fitness center; we're a community dedicated to helping you achieve your health and wellness goals. With state-of-the-art equipment, expert trainers, and a supportive atmosphere, we provide the resources and encouragement you need to transform your lifestyle. Whether you're a beginner or a seasoned athlete, our diverse range of classes and personalized training programs cater to all fitness levels and interests. We believe in fostering a positive environment where everyone feels empowered to push their limits and reach new heights. Join us on your journey to a stronger, healthier you.</p>
+            </div>
+            <div style="color: white; text-align: center; margin-top: 40px;" >
+            <h1 class="header_coach" style="margin-right: 10px; color: orange; font-family: Arial; font-weight: bold;">Our Coaches</h1>
+            </div>
+
+
+    <div class="container">
+        <div class="coach-card" style="background-color: white; width: 285px; border-radius: 40px;">
+            <div class="coach-image">
+                <div style="text-align: center; margin-top: 15px;" class="img_div">
+                <img class="imagestyling" style="width:250px; border-radius:40px;" src="davidlaid.jpg" alt="David Laid" >
+                </div>
+            </div><h4 class="coach_headtexts" style="color: orange; text-align: center; padding-top: 20px;">David Laid</h4>
+            <div class="content_course">
+               
+                <ul style="margin-right: 5px;">
+                    <li>IFBB Pro</li>
+                    <li>Flexible Workout System</li>
+                    <li>Aesthetic Training</li>
+                    <li>Healthy Weight Training Program</li>
+                    <li>Pays attention to different needs of every trainee</li>
+                    <li>12 years experience</li>
+                </ul>
+            </div>
+        </div>
+       
+
+
+        <div class="coach-card" style="background-color: white; width: 285px; border-radius: 40px;">
+            <div class="coach-image">
+                <div style="text-align: center; margin-top: 15px;" class="img_div">
+                <img class="imagestyling" style="width:250px; border-radius:40px;" src="jessicafaye.jpg" alt="Jessica Faye" >
+                </div>
+            </div><h4 class="coach_headtexts" style="color: orange; text-align: center; padding-top: 20px; ">Jessica Faye</h4>
+            <div class="content_course">
+               
+                <ul style="margin-right: 5px;">
+                    <li>IFBB Pro</li>
+                    <li>Experienced in Female Training</li>
+                    <li>Weight Management Expertise</li>
+                    <li>Healthy Weight Training Program</li>
+                    <li>Tracks your Training and Food System</li>
+                    <li>8 years experience</li>
+                </ul>
+            </div>
+        </div>
+        <div class="coach-card" style="background-color: white; width: 285px; border-radius: 40px;">
+            <div class="coach-image">
+                <div style="text-align: center; margin-top: 15px;" class="img_div">
+                <img class="imagestyling" style="width:250px; border-radius:40px;" src="samsulek.jpg" alt="Sam Sulek" >
+                </div>
+            </div><h4 class="coach_headtexts" style="color: orange; text-align: center; padding-top: 20px;">Sam Sulek</h4>
+            <div class="content_course">
+               
+                <ul style="margin-right: 5px;">
+                    <li>IFBB Pro</li>
+                    <li>Champion Training Professionalist</li>
+                    <li>Skilled in Personal Program Development</li>
+                    <li>Comprehensive Coaching Plan</li>
+                    <li>Weight Management Expertise</li>
+                    <li>15 years experience</li>
+                </ul>
+            </div>
+        </div>
+       
+    
+</body>
+</html>
