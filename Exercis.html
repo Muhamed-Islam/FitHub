@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+    <style>
+             *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box ;
+            font-family: Arial;    
+            color: white;
+            }
+            body{
+                width: 100%;
+                height: 100vh;
+                background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) ,url("Pic_9.jpg") ;
+                background-size: cover;
+                background-position: left;
+            }
+            .page{
+                padding: 10px 5%;
+                vertical-align: top;
+            }
+            a{
+                text-decoration: none;
+                color: white;
+            }
+            nav{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                font-size: 50px;
+            }
+
+            nav ul li{
+                list-style: none;
+                text-decoration: none;
+                color: white;
+                display: inline-block;
+                margin-right: 10px 30px;
+                position: relative;
+            }
+            nav ul li a{
+                color: white;
+                text-decoration: none;
+                font-size: 1.2rem;
+                position: relative;
+            }
+            nav .bar a::after{
+                content: '';
+                height: 3px;
+                width: 0;
+                background: white;
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                transition: 0.5s;
+            }
+
+            nav ul li a:hover:after{
+                width: 100%;
+                background: orange;
+            }
+
+
+            .btn{
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                margin-top: 30px;
+                margin-left: 10px;
+                position: relative;
+            }
+            .ex-button{
+                margin-right: 20px;
+                margin-bottom: 35px;
+                border: 2px solid rgba(255, 165, 0,0.8);
+                border-radius: 50px;
+                width: 100%;
+                height: 35px;
+                background-color: transparent;
+                color: rgb(255, 165, 0);
+                font-size: 20px;
+                object-fit: contain;
+                padding: 4px 4px;
+                text-align: center;
+                box-shadow: 0 0 10px rgba(255, 165, 0,0.8);
+                transition: padding 0.5s,box-shadow 0.5s, margin-bottom 0.35s;
+                cursor: pointer;
+            }
+            .ex-button:hover{
+                box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.2);
+                background-color: rgba(255, 165, 0,0.8);
+                color: white;
+                margin-bottom: 50px;
+            }
+            .ex-button:active{
+                box-shadow: 10px 20px 10px rgba(255, 255, 255, 0.2);
+            }
+            .side{
+                display: flex;
+                flex-direction: column;
+                column-gap: 40px;
+            }
+
+            .training
+            {
+                visibility:hidden;
+                display: flex;
+                flex:1;
+                flex-direction: column;
+                border: 2px solid orange;
+                border-radius: 15px;
+                /* justify-content: space-between; */
+                box-shadow: 0 0 10px rgba(255, 165, 0,0.8);
+                row-gap: 10px;
+                margin: 10px;
+                padding: 10px ;
+                scrollbar-width: normal;
+                scroll-snap-align: right;
+                scrollbar-color: gray;
+            }
+            .section{
+                margin-bottom: 10px;
+                background-color: rgba(110, 107, 107,0.4);
+                border-radius: 15px;
+                display: flex;
+                flex-direction: row;
+                object-fit: contain;
+            }
+            .left-section{
+                display: flex;
+                align-items: center;
+                border-radius: 10px;
+                width: 120px;
+                height: 100px;
+            }
+            .img-side{
+                margin: 5px;
+                width: 100%;
+                height: 90px;
+                object-fit: contain;
+            }
+            .logo {
+                font-size: 1.75rem;
+                font-weight: bold;
+                padding-top: 25px;            
+                }
+            .p{
+                color: orange;
+                }    
+
+            .right-section{
+                display: flex;
+                flex-direction: column;
+                column-gap: 30px;
+                width: 100%;
+                height: 100px;
+                flex: 1;
+                align-items: center;
+                /* background-color: lightcoral; */
+                border-radius: 10px;
+            }
+            .title{
+                margin-top: 10px;
+                font-size: 15px;
+                font-weight: 1000;
+            }
+            .sets{
+                margin-top: 10px;
+            }
+            .reps{
+                margin-top: 10px;
+            }
+        
+    </style>
+
+</head>
+    <body>
+        <div id="header">
+                <div class="page">
+                    <nav>
+                        <div class="logo">
+                            <a href="#"><span class="p">P</span>rime <span class="p">P</span>ump</a>
+                        </div>
+                        <ul>
+                            <li class="bar"><a href="home_Page.html">Home</a></li>
+                            <li class="bar"><a href="Exercis.html">Exercise</a></li>
+                            <li class="bar"><a href="Coaches.html">Coaches</a></li>
+                            <li class="bar"><a href="Deit_Page.html">Diets</a></li>
+                            <li><a href="About.html">About</a></li>
+                            <li><a href="Profile.html"><i class="fa-regular fa-user" style="color: #fff;" ></i></a></li>
+                        </ul>
+                    </nav>           
+            </div>
+            <div class="side">
+                <h1 style="text-align: center;">
+                    Choose Mus<span style="color: rgb(255, 165, 0);">cle</span>
+                </h1>
+                <div class="btn">
+                    <button class="ex-button" id="chestButton" onclick="chestEx()">Chest</button>
+                    <button class="ex-button" id="backButton" onclick="backEx()">Back</button>
+                    <button class="ex-button" id="armButton" onclick="armEx()">Arms</button>
+                    <button class="ex-button" id="shoulderButton" onclick="shoulderEx()">Sholuders</button>
+                    <button class="ex-button" id="legButton" onclick="legEx()">Legs</button>
+                </div>
+                <div class="training">
+                    <div class="section" id="div1">
+                            <div class="left-section">
+                                <img class="img-side" id="img1" src="">
+                            </div>
+                            <div class="right-section">                        
+                                    <p class="title" id="t1"></p>
+                                    <p class="sets" id="s1"></p>
+                                    <p class="reps" id="r1"></p>                    
+                            </div>
+                        </div>  
+                            <div class="section" id="div2">
+                                <div class="left-section">
+                                    <img class="img-side" id="img2" src="">
+                                </div>
+                                <div class="right-section">
+                                        <p class="title" id="t2"></p>
+                                        <p class="sets" id="s2"></p>
+                                        <p class="reps" id="r2"></p>      
+                                </div>
+                            </div>  
+                            <div class="section" id="div3">
+                                <div class="left-section">
+                                    <img class="img-side" id="img3" src="">
+                                </div>
+                                <div class="right-section">
+                                        <p class="title" id="t3"></p>
+                                        <p class="sets" id="s3"></p>
+                                        <p class="reps" id="r3"></p>      
+                                </div>
+                            </div>  
+                            <div class="section" id="div4">
+                                <div class="left-section">
+                                    <img class="img-side" id="img4" src="">
+                                </div>
+                                <div class="right-section">
+                                        <p class="title" id="t4"></p>
+                                        <p class="sets" id="s4"></p>
+                                        <p class="reps" id="r4"></p>      
+                                </div>
+                            </div>  
+                            <div class="section" id="div5">
+                                <div class="left-section">
+                                    <img class="img-side" id="img5" src=""> 
+                                </div>
+                                <div class="right-section">
+                                        <p class="title" id="t5"></p>
+                                        <p class="sets" id="s5"></p>
+                                        <p class="reps" id="r5"></p>      
+                                </div>
+                            </div>  
+                            <div class="section" id="div6">
+                                <div class="left-section">
+                                    <img class="img-side" id="img6" src="">  
+                                </div>
+                                <div class="right-section">
+                                        <p class="title" id="t6"></p>
+                                        <p class="sets" id="s6"></p>
+                                        <p class="reps" id="r6"></p>      
+                                </div>
+                            </div>  
+                            <div class="section" id="div7">
+                                <div class="left-section">
+                                    <img class="img-side" id="img7" src="">
+                                </div>
+                                <div class="right-section">
+                                        <p class="title" id="t7"></p>
+                                        <p class="sets" id="s7"></p>
+                                        <p class="reps" id="r7"></p>      
+                                </div>
+                            </div>  
+                            <div class="section" id="div8">
+                                <div class="left-section">
+                                    <img class="img-side" id="img8" src="">
+                                </div>
+                                <div class="right-section">
+                                        <p class="title" id="t8"></p>
+                                        <p class="sets" id="s8"></p>
+                                        <p class="reps" id="r8"></p>      
+                                </div>
+                            </div>  
+                    </div>  
+                </div>
+        </div>
+            <script>
+                let training=document.querySelector(".training");
+                let img1=document.getElementById();
+                function chestEx(){
+                training.style.visibility="visible";
+                document.getElementById("img1").src="Workouts/Barbell_bench_press.gif";
+                document.getElementById("t1").innerText="Barbell Bench Press";      
+                document.getElementById("s1").innerText="4 Sets";      
+                document.getElementById("r1").innerText="8 - 12 Rep";  
+
+                document.getElementById("img2").src="Workouts/Incline_cable_bench_press.gif";
+                document.getElementById("t2").innerText="Incline_cable_bench_press";      
+                document.getElementById("s2").innerText="4 Sets";      
+                document.getElementById("r2").innerText="8 - 12 Rep";
+
+                document.getElementById("img3").src="Workouts/Cabel_chest.gif";
+                document.getElementById("t3").innerText="Cabel Chest";      
+                document.getElementById("s3").innerText="4 Sets";      
+                document.getElementById("r3").innerText="8 - 12 Rep";
+
+                document.getElementById("img4").src="Workouts/Buterfly_Bench_press.gif";
+                document.getElementById("t4").innerText="Flys Bench Press";      
+                document.getElementById("s4").innerText="4 Sets";      
+                document.getElementById("r4").innerText="8 - 12 Rep";
+
+                document.getElementById("img5").src="Workouts/Decline_bench_press.gif";
+                document.getElementById("t5").innerText="Decline Bench Press";      
+                document.getElementById("s5").innerText="4 Sets";      
+                document.getElementById("r5").innerText="8 - 12 Rep";
+
+                document.getElementById("img6").src="Workouts/Pushups.gif";
+                document.getElementById("t6").innerText="Push Ups";      
+                document.getElementById("s6").innerText="4 Sets";      
+                document.getElementById("r6").innerText="8 - 12 Rep";
+                
+                document.getElementById("img7").src="Workouts/Depth_bench_press.gif";
+                document.getElementById("t7").innerText="Depth Bench Press";      
+                document.getElementById("s7").innerText="4 Sets";      
+                document.getElementById("r7").innerText="8 - 12 Rep";
+
+                document.getElementById("img8").src="Workouts/Blank_Abs.gif";
+                document.getElementById("t8").innerText="Blank";      
+                document.getElementById("s8").innerText="5 Sets";      
+                document.getElementById("r8").innerText="30 seconds";
+            }
+                 function backEx(){
+                training.style.visibility="visible";
+                document.getElementById("img1").src="Workouts/Barbell_Pullups.gif";
+                document.getElementById("t1").innerText="Barbell Pull Ups";      
+                document.getElementById("s1").innerText="4 Sets";      
+                document.getElementById("r1").innerText="8 - 12 Rep";
+
+                document.getElementById("img2").src="Workouts/Cabel_Cross_LatPull_Down.gif";
+                document.getElementById("t2").innerText="Cabel Cross Lat Pull Down";      
+                document.getElementById("s2").innerText="4 Sets";      
+                document.getElementById("r2").innerText="8 - 12 Rep";
+
+                document.getElementById("img3").src="Workouts/Half_Knee_Lat_Pull_down.gif";
+                document.getElementById("t3").innerText="Half Knee Lat Pull Down";      
+                document.getElementById("s3").innerText="3 Sets";      
+                document.getElementById("r3").innerText="8 - 12 Rep";
+
+                document.getElementById("img4").src="Workouts/Seated_Row_Machine.gif";
+                document.getElementById("t4").innerText="Seated Row Machine";      
+                document.getElementById("s4").innerText="4 Sets";      
+                document.getElementById("r4").innerText="8 - 12 Rep";
+
+                document.getElementById("img5").src="Workouts/T-Bar.gif";
+                document.getElementById("t5").innerText="T-Bar";      
+                document.getElementById("s5").innerText="3 Sets";      
+                document.getElementById("r5").innerText="10 - 12 Rep";
+
+                document.getElementById("img6").src="Workouts/V-Taper.gif";
+                document.getElementById("t6").innerText="V-Taper";      
+                document.getElementById("s6").innerText="3 Sets";      
+                document.getElementById("r6").innerText="10 - 12 Rep";
+
+                document.getElementById("img7").src="Workouts/Pull_ups.gif";
+                document.getElementById("t7").innerText="Pull Ups";      
+                document.getElementById("s7").innerText="4 Sets";      
+                document.getElementById("r7").innerText="6 - 8 Rep";
+
+                document.getElementById("img8").src="Workouts/HyperExtension.gif";
+                document.getElementById("t8").innerText="HyperExtension";      
+                document.getElementById("s8").innerText="5 Sets";      
+                document.getElementById("r8").innerText="10 - 15 Rep";
+            }
+                function armEx(){
+                training.style.visibility="visible";
+                document.getElementById("img1").src="Workouts/Bicep curl.gif";
+                document.getElementById("t1").innerText="Bicep Curl";      
+                document.getElementById("s1").innerText="4 Sets";      
+                document.getElementById("r1").innerText="10 - 12 Rep";
+
+                document.getElementById("img2").src="Workouts/Bicep incline curls.gif";
+                document.getElementById("t2").innerText="Bicep Incline Curls";      
+                document.getElementById("s2").innerText="4 Sets";      
+                document.getElementById("r2").innerText="8 - 12 Rep";
+
+                document.getElementById("img3").src="Workouts/Bicep wide bar grip.gif";
+                document.getElementById("t3").innerText="Bicep Wide Bar Grip";      
+                document.getElementById("s3").innerText="3 Sets";      
+                document.getElementById("r3").innerText="10 - 15 Rep";
+
+                document.getElementById("img4").src="Workouts/Incline Scull crusher Triceps.gif";
+                document.getElementById("t4").innerText="Tricep Incline Scull Crusher";      
+                document.getElementById("s4").innerText="4 Sets";      
+                document.getElementById("r4").innerText="8 - 12 Rep";
+
+                document.getElementById("img5").src="Workouts/Tricep Dip Machine.gif";
+                document.getElementById("t5").innerText="Tricep Dip Machine";      
+                document.getElementById("s5").innerText="4 Sets";      
+                document.getElementById("r5").innerText="8 - 15 Rep";
+
+                document.getElementById("img6").src="Workouts/French press.gif";
+                document.getElementById("t6").innerText="French Press";      
+                document.getElementById("s6").innerText="4 Sets";      
+                document.getElementById("r6").innerText="8 - 12 Rep";
+
+                document.getElementById("img7").src="Workouts/Dumbbell wrist curl.gif";
+                document.getElementById("t7").innerText="Dumbbell Wrist Curl";      
+                document.getElementById("s7").innerText="5 Sets";      
+                document.getElementById("r7").innerText="10 - 15 Rep";
+
+                document.getElementById("img8").src="Workouts/Abs Quarter set.gif";
+                document.getElementById("t8").innerText="Abs Quarter Set";      
+                document.getElementById("s8").innerText="5 Sets";      
+                document.getElementById("r8").innerText="15 - 20 Rep";
+
+            }
+                function shoulderEx(){
+                training.style.visibility="visible";
+                document.getElementById("img1").src="Workouts/Shoulder press.gif";
+                document.getElementById("t1").innerText="Shoulder Press";      
+                document.getElementById("s1").innerText="4 Sets";      
+                document.getElementById("r1").innerText="8 - 12 Rep";
+
+                document.getElementById("img2").src="Workouts/Lateral Raise.gif";
+                document.getElementById("t2").innerText="Lateral Raise";      
+                document.getElementById("s2").innerText="4 Sets";      
+                document.getElementById("r2").innerText="8 - 12 Rep";
+
+                document.getElementById("img3").src="Workouts/Dumbbell 6 way raise.gif";
+                document.getElementById("t3").innerText="Dumbbell 6 Way Raise";      
+                document.getElementById("s3").innerText="5 Sets";      
+                document.getElementById("r3").innerText="10 - 15 Rep";
+
+                document.getElementById("img4").src="Workouts/Front Head shoulder press.gif";
+                document.getElementById("t4").innerText="Front Head Shoulder Press";      
+                document.getElementById("s4").innerText="4 Sets";      
+                document.getElementById("r4").innerText="8 - 12 Rep";
+
+                document.getElementById("img5").src="Workouts/Barbell shrug.gif";
+                document.getElementById("t5").innerText="Barbell Shrug";      
+                document.getElementById("s5").innerText="3 Sets";      
+                document.getElementById("r5").innerText="8 - 15 Rep";
+
+                document.getElementById("img6").src="Workouts/Half Kneeling Cable.gif";
+                document.getElementById("t6").innerText="Half Kneeling Cable";      
+                document.getElementById("s6").innerText="3 Sets";      
+                document.getElementById("r6").innerText="10 - 15 Rep";
+
+                document.getElementById("img7").src="Workouts/Delt Machine fly.gif";
+                document.getElementById("t7").innerText="Delt Machine Fly";      
+                document.getElementById("s7").innerText="4 Sets";      
+                document.getElementById("r7").innerText="10 - 12 Rep";
+
+                document.getElementById("img8").src="Workouts/Abs workout.gif";
+                document.getElementById("t8").innerText="Hell Touch";      
+                document.getElementById("s8").innerText="5 Sets";      
+                document.getElementById("r8").innerText="15 - 20 Rep";
+
+            }
+                function legEx(){
+                training.style.visibility="visible";
+                document.getElementById("img1").src="Workouts/Leg extension.gif";
+                document.getElementById("t1").innerText="Leg extension";      
+                document.getElementById("s1").innerText="4 Sets";      
+                document.getElementById("r1").innerText="8 - 12 Rep";
+
+                document.getElementById("img2").src="Workouts/Barbell Squads.gif";
+                document.getElementById("t2").innerText="Barbell Squads";      
+                document.getElementById("s2").innerText="3 Sets";      
+                document.getElementById("r2").innerText="10 - 15 Rep";
+
+                document.getElementById("img3").src="Workouts/Barbell Split Squads.gif";
+                document.getElementById("t3").innerText="Barbell Split Squads";      
+                document.getElementById("s3").innerText="3 Sets";      
+                document.getElementById("r3").innerText="10 - 15 Rep";
+
+                document.getElementById("img4").src="Workouts/Lever kneeling Leg Curl.gif";
+                document.getElementById("t4").innerText="Lever Kneeling Leg Curl";      
+                document.getElementById("s4").innerText="4 Sets";      
+                document.getElementById("r4").innerText="8 - 12 Rep";
+
+                document.getElementById("img5").src="Workouts/Barbell Dead lift.gif";
+                document.getElementById("t5").innerText="Barbell Dead Lift";      
+                document.getElementById("s5").innerText="3 Sets";      
+                document.getElementById("r5").innerText="6 - 8 Rep";
+
+                document.getElementById("img6").src="Workouts/Leg Press.gif";
+                document.getElementById("t6").innerText="Leg Press";      
+                document.getElementById("s6").innerText="4 Sets";      
+                document.getElementById("r6").innerText="6 - 12 Rep";
+
+                document.getElementById("img7").src="Workouts/Dumbbell Glute Bridge.gif";
+                document.getElementById("t7").innerText="Dumbbell Glute Bridge";      
+                document.getElementById("s7").innerText="3 Sets";      
+                document.getElementById("r7").innerText="10 - 15 Rep";
+
+                document.getElementById("img8").src="Workouts/Abs_workout.gif";
+                document.getElementById("t8").innerText="Abs";      
+                document.getElementById("s8").innerText="5 Sets";      
+                document.getElementById("r8").innerText="15 - 20 Rep";
+            }
+        </script>
+</body>
+</html>
